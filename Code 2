@@ -6753,7 +6753,7 @@ campaignTrail_temp.answer_feedback_json =
 		"fields": {
 			"answer": 5170, 
 			"candidate": 201, 
-			"answer_feedback": "Trump calls you personally and asks why you called everyone but him; even Cheney got a call. He's not happy. Trump hangs up, and the phone goes silent."}}, 
+			"answer_feedback": "Presidents like Obama, Bush, and Clinton give you their thoughts and prayers. Trump calls you personally and asks why you called everyone but him; even Cheney got a call. He's not happy. Trump hangs up, and the phone goes silent."}}, 
 	{
 		"model": "campaign_trail.answer_feedback", 
 		"pk": 901041, 
@@ -12966,7 +12966,8 @@ if (usa == true) {
       }, 8000); // 8000 milliseconds = 8 seconds
   }
   
-  
+  runthisonlyonce = 0;
+  runthisonlyonce2 = 0;
   
   cyoAdventure = function(a) {
       ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
@@ -12989,9 +12990,12 @@ if (usa == true) {
      }
       if(ans == 20261 || ans == 20262 || ans == 20263 || ans == 20264){        campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2027);  
      }
-      if((ans == 13011 || ans == 23011 || ans == 33011 || ans == 43011) && running == false){    
-  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2011);  
-  }    
+      if((ans == 13011 || ans == 23011 || ans == 33011 || ans == 43011) && running == false){ 
+		if (runthisonlyonce2 == 0) {
+			campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2011);
+			runthisonlyonce2 = 1;			
+		}
+  }  
   if((campaignTrail_temp.question_number === 35) && running == false){    
   if (newsomnominated == true) {
   campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1107);  
@@ -13573,8 +13577,12 @@ campaignTrail_temp.election_json[0].fields.advisor_url = "https://i.imgur.com/i3
   polease(); 
   lameduck();
      }
-   if(ans == 90141|| ans == 900101 || ans == 90103 || ans == 90034 || ans == 90031 || ans == 90091 || ans == 90092 || ans == 90073 || ans == 90072 || ans == 90081 || ans == 90083 || ans == 90042 || ans == 90041){       
-  nominated();
+   if(ans == 90141|| ans == 90101 || ans == 90103 || ans == 90034 || ans == 90031 || ans == 90091 || ans == 90092 || ans == 90073 || ans == 90072 || ans == 90081 || ans == 90083 || ans == 90042 || ans == 90041){ 
+// NAIMINA BUGFIX: If this broke again, it's probably the 90101 answer you changed. Change it back to 900101.
+	if (runthisonlyonce == 0) {
+		nominated();
+		runthisonlyonce = 1;
+	}
   }
    if(ans == 12020){       
   newsom += 1;  
@@ -13700,9 +13708,13 @@ if (intervention2 == true) {
     if((ans == 12009) && running == true){        campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2004);  
      }
     
-    if((ans == 8802 || ans == 8801 || ans == 8701 || ans == 8702 || ans == 8703 || ans == 8601 || ans == 8602 || ans == 8501 || ans == 8502 || ans == 8503 || ans == 8402 || ans == 8401 || ans == 8301 || ans == 8302 || ans == 8303 || ans == 8201 || ans == 8202 || ans == 8102 || ans == 8101|| ans == 8103) && running == true){        
-       campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2011);  
+  if((ans == 8802 || ans == 8801 || ans == 8701 || ans == 8702 || ans == 8703 || ans == 8601 || ans == 8602 || ans == 8501 || ans == 8502 || ans == 8503 || ans == 8402 || ans == 8401 || ans == 8301 || ans == 8302 || ans == 8303 || ans == 8201 || ans == 8202 || ans == 8102 || ans == 8101|| ans == 8103) && running == true){
+		if (runthisonlyonce2 == 0) {
+			campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(2011);
+			runthisonlyonce2 = 1;
+		}
      }
+
     if(ans == 12026 || ans == 12027 || ans == 12028 || ans == 12029){   
 if (nato == true) {
          campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(8015); 
@@ -15694,16 +15706,3 @@ function moveMapFooter() {
 
 // Run the function every 100 milliseconds (adjust as needed)
 setInterval(moveMapFooter, 100);
-
-
-
-
-
-
-
-
-
-
-
-
-
