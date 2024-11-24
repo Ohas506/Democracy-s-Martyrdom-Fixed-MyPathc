@@ -18,6 +18,7 @@ if (typeof unlockAchievement !== 'function') {
         }
     };
 }
+
 // Example usage
 changeCandidateMargins = (candidate, boost) => {
     for (i in e.candidate_state_multiplier_json) {
@@ -13076,123 +13077,142 @@ polis += 1
   console.log("Patriotic?")
     console.log(bipartisanmeter)
   }
-if (campaignTrail_temp.question_number === 43) {
-   if (trumpvp == "Doug Burgum") {
-      if (demvp == "John Carney") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1000);  
-      }
-      if (demvp == "Al Gore")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1002);  
-      }
-            if (demvp == "Andy Beshear")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1032);  
-      }
-            if (demvp == "Gavin Newsom")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1004);  
-      }
-      if (demvp == "Jared Polis")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1006);  
-      }
-            if (demvp == "Tim Walz")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1010);  
-      }
-                  if (demvp == "Elizabeth Warren")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1008);  
-      }
-   }
-   if (trumpvp == "J.D. Vance") {
+// Ensure the variable is initialized only once
+if (typeof onlyRunThisOnce === "undefined") {
+    var onlyRunThisOnce = false;
+}
+
+if (!onlyRunThisOnce) {
+    if (campaignTrail_temp.question_number === 43) {
+        // Trump VP and Dem VP combinations and question assignments
+        if (trumpvp == "Doug Burgum") {
             if (demvp == "John Carney") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1001);  
-      }
-      if (demvp == "Al Gore")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1003);  
-      }
-            if (demvp == "Andy Beshear")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1033);  
-      }
-            if (demvp == "Gavin Newsom")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1005);  
-      }
-      if (demvp == "Jared Polis")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1007);  
-      }
-            if (demvp == "Tim Walz")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1011);  
-      }
-                  if (demvp == "Elizabeth Warren")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1009);  
-      }
-   }
-      if (trumpvp == "Nikki Haley") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1000);  
+            }
+            if (demvp == "Al Gore") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1002);  
+            }
+            if (demvp == "Andy Beshear") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1032);  
+            }
+            if (demvp == "Gavin Newsom") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1004);  
+            }
+            if (demvp == "Jared Polis") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1006);  
+            }
+            if (demvp == "Tim Walz") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1010);  
+            }
+            if (demvp == "Elizabeth Warren") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1008);  
+            }
+        }
+
+        if (trumpvp == "J.D. Vance") {
+            if (demvp == "John Carney") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1001);  
+            }
+            if (demvp == "Al Gore") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1003);  
+            }
+            if (demvp == "Andy Beshear") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1033);  
+            }
+            if (demvp == "Gavin Newsom") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1005);  
+            }
+            if (demvp == "Jared Polis") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1007);  
+            }
+            if (demvp == "Tim Walz") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1011);  
+            }
+            if (demvp == "Elizabeth Warren") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1009);  
+            }
+        }
+
+        if (trumpvp == "Nikki Haley") {
             if (demvp == "Liz Cheney") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1012);  
-      }
-            if (demvp == "Gavin Newsom")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1015);  
-      }
-      if (demvp == "Jared Polis")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1017);  
-      }
-            if (demvp == "Tim Walz")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1021);  
-      }
-                  if (demvp == "Elizabeth Warren")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1019);  
-      }
-   }
-         if (trumpvp == "Tulsi Gabbard") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1012);  
+            }
+            if (demvp == "Gavin Newsom") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1015);  
+            }
+            if (demvp == "Jared Polis") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1017);  
+            }
+            if (demvp == "Tim Walz") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1021);  
+            }
+            if (demvp == "Elizabeth Warren") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1019);  
+            }
+        }
+
+        if (trumpvp == "Tulsi Gabbard") {
             if (demvp == "Liz Cheney") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1013);  
-      }
-                  if (demvp == "Chris Sununu") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1014);  
-      }
-            if (demvp == "Gavin Newsom")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1016);  
-      }
-      if (demvp == "Jared Polis")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1018);  
-      }
-            if (demvp == "Tim Walz")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1022);  
-      }
-                  if (demvp == "Elizabeth Warren")  {
-                  campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1020);  
-      }
-   }
-            if (trumpvp == "Kristi Noem") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1013);  
+            }
+            if (demvp == "Chris Sununu") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1014);  
+            }
+            if (demvp == "Gavin Newsom") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1016);  
+            }
+            if (demvp == "Jared Polis") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1018);  
+            }
+            if (demvp == "Tim Walz") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1022);  
+            }
+            if (demvp == "Elizabeth Warren") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1020);  
+            }
+        }
+
+        if (trumpvp == "Kristi Noem") {
             if (demvp == "Gretchen Whitmer") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1024);  
-      }
-                  if (demvp == "Michelle Lujan Grisham") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1026);  
-      }
-   }
-               if (trumpvp == "Sarah Huckabee Sanders") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1024);  
+            }
+            if (demvp == "Michelle Lujan Grisham") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1026);  
+            }
+        }
+
+        if (trumpvp == "Sarah Huckabee Sanders") {
             if (demvp == "Gretchen Whitmer") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1023);  
-      }
-                  if (demvp == "Michelle Lujan Grisham") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1025);  
-      }
-   }
-                  if (trumpvp == "Ben Carson") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1023);  
+            }
+            if (demvp == "Michelle Lujan Grisham") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1025);  
+            }
+        }
+
+        if (trumpvp == "Ben Carson") {
             if (demvp == "Pete Aguilar") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1028);  
-      }
-                  if (demvp == "Wes Moore") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1030);  
-      }
-   }
-                     if (trumpvp == "Vivek Ramaswamy") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1028);  
+            }
+            if (demvp == "Wes Moore") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1030);  
+            }
+        }
+
+        if (trumpvp == "Vivek Ramaswamy") {
             if (demvp == "Pete Aguilar") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1027);  
-      }
-                  if (demvp == "Wes Moore") {
-         campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1029);  
-      }
-   }
-   }
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1027);  
+            }
+            if (demvp == "Wes Moore") {
+                campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(1029);  
+            }
+        }
+    }
+
+    // Set this block to run only once
+    onlyRunThisOnce = true;
+}
+
 if(ans == 80171) {
 usafail += 2
 }
